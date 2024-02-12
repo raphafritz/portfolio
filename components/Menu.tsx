@@ -58,10 +58,18 @@ export default function Menu() {
 
           <div className={styles.social}>
             <div className={styles.links}>
-              <a href="#" className={styles.link}>
+              <a
+                href="https://github.com/raphafritz"
+                className={styles.link}
+                target="_blank"
+              >
                 <span>GitHub</span>
               </a>
-              <a href="#" className={styles.link}>
+              <a
+                href="https://www.linkedin.com/raphaelsella"
+                className={styles.link}
+                target="_blank"
+              >
                 <span>LinkedIn</span>
               </a>
             </div>

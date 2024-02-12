@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bitter } from "next/font/google";
-import "./globals.scss";
+import "@/styles/globals.scss";
 
 import SmoothScroll from "@/components/SmoothScroll";
 

@@ -21,14 +21,16 @@ const options = {
 
 const SmoothScroll = () => {
   useEffect(() => {
-    const body = document.body;
+    const appElement = document.getElementById("app");
+
+    if (!appElement) return;
 
     Scrollbar.use(OverscrollPlugin);
-    const Scroll = Scrollbar.init(body, options);
+    const Scroll = Scrollbar.init(appElement, options);
     Scroll.track.yAxis.element.remove();
 
     return () => {
-      if (Scrollbar) Scrollbar.destroy(body);
+      if (Scrollbar) Scrollbar.destroy(appElement);
     };
   }, []);
 

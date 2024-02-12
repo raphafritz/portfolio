@@ -1,0 +1,17 @@
+.footerContainer {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #202228;
+    padding: 3rem;
+
+    p {
+      color: #fff;
+      opacity: 0.5;
+      font-size: clamp(1.4rem, 3vw, 1.6rem);
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+  }
+}
