@@ -2,7 +2,7 @@
 
 import styles from "@/styles/page.module.scss";
 
-import Menu from "@/components/Menu";
+import Menu from "@/containers/Menu";
 
 import { Wave } from "@/components/Icons";
 
@@ -10,6 +10,7 @@ import Projects from "@/containers/Projects";
 import Posts from "@/containers/Posts";
 import AboutMe from "@/containers/AboutMe";
 import Header from "@/containers/Header";
+import Footer from "@/containers/Footer";
 
 export default function Home() {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
         <Posts />
       </main>
 
+      <Footer />
       <Menu />
     </>
   );

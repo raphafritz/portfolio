@@ -61,6 +61,7 @@ export default function Menu() {
               <a
                 href="https://github.com/raphafritz"
                 className={styles.link}
+                aria-label="GitHub"
                 target="_blank"
               >
                 <span>GitHub</span>
@@ -68,6 +69,7 @@ export default function Menu() {
               <a
                 href="https://www.linkedin.com/raphaelsella"
                 className={styles.link}
+                aria-label="LinkedIn"
                 target="_blank"
               >
                 <span>LinkedIn</span>

@@ -2,15 +2,15 @@
   .me {
     font-size: clamp(3rem, 5vw, 5rem);
     line-height: 1.25;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 500;
     position: relative;
     color: #fff;
 
     .name {
       display: block;
-      opacity: 0.5;
       margin-bottom: 1rem;
+      color: #777;
     }
 
     .colon,
@@ -81,15 +81,13 @@
   }
 
   h2 {
-    font-size: 1.8rem;
     font-size: clamp(1.6rem, 3vw, 1.8rem);
     line-height: 1.5;
-    color: #fff;
-    opacity: 0.5;
-    font-weight: 300;
+    color: #777;
+    font-weight: 400;
     max-width: 1000px;
     margin-top: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 
     strong {
       font-weight: 500;

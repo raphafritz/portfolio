@@ -76,6 +76,11 @@
   margin: 0;
 }
 
+::selection {
+  background: #ffd55e;
+  color: #0d0c22;
+}
+
 html {
   scroll-behavior: smooth;
 }

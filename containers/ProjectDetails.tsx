@@ -11,6 +11,8 @@ import { ArrowRight, GitHub, LinkedIn, Wave } from "../components/Icons";
 import Button from "../components/Button";
 const css = classNames.bind(styles);
 
+import ProjectOne from "@/public/068e2067120026688b6e8bae5cd3a06e.png";
+
 interface ProjectDetailsProps {
   open: boolean;
   onClose: () => void;
@@ -29,7 +31,7 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
       <div className={styles.fade} onClick={onClose} />
       <div className={styles.drawer}>
         <div className={styles.picture}>
-          {/* <Image src={ProjectOne} alt="" layout="responsive" /> */}
+          <Image src={ProjectOne} alt="" layout="responsive" />
         </div>
         <div className={styles.details}>
           <p className={styles.name}>Adopet</p>
@@ -46,7 +48,7 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
           </div>
 
           <div className="d-flex flex-1 justify-between align-end">
-            <div className="d-flex align-center gap-15">
+            <div className="d-flex align-center">
               <Button design="icon" ariaLabel="LinkedIn">
                 <a href="#" target="_blank">
                   <LinkedIn />
@@ -58,10 +60,10 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
                 </a>
               </Button>
             </div>
-            <button className={styles.underline}>
+            <Button design="primary">
               <span>Ver aplicação</span>
               <ArrowRight />
-            </button>
+            </Button>
           </div>
         </div>
       </div>
