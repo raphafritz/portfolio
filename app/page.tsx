@@ -2,8 +2,6 @@
 
 import styles from "@/styles/page.module.scss";
 
-import Menu from "@/containers/Menu";
-
 import { Wave } from "@/components/Icons";
 
 import Projects from "@/containers/Projects";
@@ -37,24 +35,19 @@ export default function Home() {
           <Projects />
         </section>
 
-        <div className="d-flex justify-center">
-          <Wave />
-        </div>
-
-        <section className={styles.blogSection} id="blog">
+        {/* <section className={styles.blogSection} id="blog">
           <h3 className={styles.titleSection} content="Posts do">
             Blog
           </h3>
           <p className={styles.subtitleSection}>
             Aqui compartilho algumas das minhas experiências e conhecimentos
           </p>
-        </section>
 
-        <Posts />
+          <Posts />
+        </section> */}
       </main>
 
       <Footer />
-      <Menu />
     </>
   );
 }

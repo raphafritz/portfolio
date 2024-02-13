@@ -9,7 +9,6 @@
 
     .name {
       display: block;
-      margin-bottom: 1rem;
       color: #777;
     }
 
@@ -91,6 +90,18 @@
 
     strong {
       font-weight: 500;
+    }
+  }
+
+  .techs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 2rem;
+
+    svg {
+      width: 50px;
     }
   }
 }

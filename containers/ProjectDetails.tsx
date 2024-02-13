@@ -48,7 +48,7 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
           </div>
 
           <div className="d-flex flex-1 justify-between align-end">
-            <div className="d-flex align-center">
+            <div className="d-flex align-center gap-15">
               <Button design="icon" ariaLabel="LinkedIn">
                 <a href="#" target="_blank">
                   <LinkedIn />
@@ -60,7 +60,7 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
                 </a>
               </Button>
             </div>
-            <Button design="primary">
+            <Button design="underline">
               <span>Ver aplicação</span>
               <ArrowRight />
             </Button>
