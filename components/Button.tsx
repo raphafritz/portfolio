@@ -6,7 +6,7 @@ import classNames from "classnames/bind";
 const css = classNames.bind(styles);
 
 interface ButtonProps {
-  design: string;
+  design?: string;
   onClick?: () => void;
   ariaLabel?: string;
   children?: ReactNode;
