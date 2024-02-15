@@ -7,7 +7,7 @@ import styles from "@/styles/projects.module.scss";
 import ProjectDetails from "@/containers/ProjectDetails";
 import Button from "@/components/Button";
 
-import ProjectOne from "@/public/image_processing20210119-19857-15nskjt.png";
+import ProjectOne from "@/public/068e2067120026688b6e8bae5cd3a06e.png";
 import Image from "next/image";
 
 export default function Projects() {

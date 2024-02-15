@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/menu.module.scss";
 
 import classNames from "classnames/bind";
-import { Wave } from "@/components/Icons";
 const css = classNames.bind(styles);
 
 export default function Menu() {
@@ -55,33 +54,8 @@ export default function Menu() {
                 <span>Projetos</span>
                 <span>Projetos</span>
               </li>
-              {/* <li onClick={() => goToSection("blog")}>
-                <span>Blog</span>
-                <span>Blog</span>
-              </li> */}
             </ul>
           </div>
-
-          {/* <div className={styles.social}>
-            <div className={styles.links}>
-              <a
-                href="https://github.com/raphafritz"
-                className={styles.link}
-                aria-label="GitHub"
-                target="_blank"
-              >
-                <span>GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/raphaelsella"
-                className={styles.link}
-                aria-label="LinkedIn"
-                target="_blank"
-              >
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
     </>
