@@ -13,7 +13,7 @@
   margin: auto;
 
   @media screen and (max-width: 767px) {
-    padding: 5rem 2.5rem 10rem;
+    padding: 15rem 2.5rem 10rem;
     overflow-x: hidden;
   }
 
@@ -99,33 +99,35 @@
     padding: 3rem;
     position: relative;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
-    transition: transform 0.25s ease;
+    transition: all 0.25s ease;
 
-    &:nth-child(1) {
-      @include animation(fromLeft, cover 0% cover 40%, view());
-    }
-    &:nth-child(2) {
-      @include animation(fromBottom, cover 0% cover 40%, view());
-    }
-    &:nth-child(3) {
-      @include animation(fromRight, cover 0% cover 40%, view());
-    }
-    &:nth-child(4) {
-      @include animation(fromLeft, cover 0% cover 40%, view());
-    }
-    &:nth-child(5) {
-      @include animation(fromBottom, cover 0% cover 40%, view());
-    }
-    &:nth-child(6) {
-      @include animation(fromRight, cover 0% cover 40%, view());
+    @media screen and (min-width: 768px) {
+      &:nth-child(1) {
+        @include animation(fromLeft, cover 0% cover 40%, view());
+      }
+      &:nth-child(2) {
+        @include animation(fromBottom, cover 0% cover 40%, view());
+      }
+      &:nth-child(3) {
+        @include animation(fromRight, cover 0% cover 40%, view());
+      }
+      &:nth-child(4) {
+        @include animation(fromLeft, cover 0% cover 40%, view());
+      }
+      &:nth-child(5) {
+        @include animation(fromBottom, cover 0% cover 40%, view());
+      }
+      &:nth-child(6) {
+        @include animation(fromRight, cover 0% cover 40%, view());
+      }
     }
 
     &:hover {
-      transform: translateY(-1rem);
+      box-shadow: 15px 10px 0px rgba(0, 0, 0, 0.05);
     }
 
     .title {
-      font-size: 2.6rem;
+      font-size: clamp(2rem, 3vw, 2.6rem);
       letter-spacing: 1px;
       font-weight: 500;
       position: relative;
@@ -133,7 +135,7 @@
     }
 
     .description {
-      font-size: 1.6rem;
+      font-size: clamp(1.4rem, 3vw, 1.6rem);
       line-height: 1.5;
       color: #555;
       font-weight: 400;
