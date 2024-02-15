@@ -122,8 +122,9 @@
   }
 
   svg {
-    width: 40px;
-    opacity: 0.1;
+    width: 35px;
+    opacity: 0.25;
+    transition: all 0.15s ease;
   }
 }
 
@@ -164,6 +165,10 @@
     svg {
       opacity: 1;
       transform: translateX(0.25rem);
+
+      path {
+        stroke: #fff;
+      }
     }
 
     span {

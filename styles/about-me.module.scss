@@ -1,3 +1,9 @@
+@mixin animation($range: range) {
+  animation: appear 1s;
+  animation-timeline: scroll();
+  animation-range: $range;
+}
+
 .aboutMeContainer {
   .me {
     font-size: clamp(3rem, 5vw, 5rem);
@@ -6,10 +12,15 @@
     font-weight: 500;
     position: relative;
     color: #fff;
+    @include animation(cover 0 cover 50%);
 
     .name {
       display: block;
-      color: #777;
+      color: #ffbe98;
+      margin-bottom: 2rem;
+      font-size: clamp(4.4rem, 5vw, 6.4rem);
+      font-weight: 800;
+      @include animation(cover 0 cover 40%);
     }
 
     .colon,
@@ -50,9 +61,6 @@
     .modern {
       position: relative;
       display: inline-flex;
-      line-height: 1.5;
-      text-transform: uppercase;
-      font-size: clamp(2.4rem, 5vw, 4rem);
 
       svg {
         position: absolute;
@@ -64,10 +72,8 @@
     }
 
     .intuitive {
-      display: inline;
+      display: inline-flex;
       position: relative;
-      transform: translate(-50%, -50%);
-      line-height: 1.2;
 
       span:nth-child(2) {
         color: #12a8ed;
@@ -112,17 +118,28 @@
   }
 
   h2 {
-    font-size: clamp(1.6rem, 3vw, 1.8rem);
+    font-size: 1.6rem;
     line-height: 1.5;
-    color: #777;
+    color: #555;
     font-weight: 400;
-    max-width: 1000px;
-    margin-top: 20px;
+    margin-top: 2rem;
     letter-spacing: 1px;
+    @include animation(cover 0 cover 60%);
 
-    strong {
-      font-weight: 500;
+    span {
+      display: block;
+
+      &:nth-child(2) {
+        margin-top: 0.5rem;
+      }
     }
+  }
+
+  .socials {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    @include animation(cover 0 cover 70%);
   }
 }
 
@@ -185,5 +202,17 @@
       100% 100%,
       0% 100%
     );
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-20vh);
   }
 }

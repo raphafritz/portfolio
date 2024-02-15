@@ -88,12 +88,11 @@ html {
 html,
 body {
   font-size: 10px;
+  user-select: none;
 }
 
 body {
   background: linear-gradient(to bottom, #101113, #101113);
-  height: 100svh;
-  overflow-y: auto;
 }
 
 * {
@@ -141,4 +140,30 @@ a {
 
 .gap-15 {
   gap: 15px;
+}
+
+#blob {
+  background: #fff;
+  height: 30px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #4cabaf, aquamarine);
+  animation: rotate 20s infinite;
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
 }

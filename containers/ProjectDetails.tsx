@@ -49,14 +49,14 @@ export default function ProjectDetails({ open, onClose }: ProjectDetailsProps) {
 
           <div className="d-flex flex-1 justify-between align-end">
             <div className="d-flex align-center gap-15">
-              <Button design="icon" ariaLabel="LinkedIn">
-                <a href="#" target="_blank">
-                  <LinkedIn />
-                </a>
-              </Button>
               <Button design="icon" ariaLabel="GitHub">
                 <a href="#" target="_blank">
                   <GitHub />
+                </a>
+              </Button>
+              <Button design="icon" ariaLabel="LinkedIn">
+                <a href="#" target="_blank">
+                  <LinkedIn />
                 </a>
               </Button>
             </div>

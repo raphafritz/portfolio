@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "@/styles/menu.module.scss";
 
 import classNames from "classnames/bind";
+import { Wave } from "@/components/Icons";
 const css = classNames.bind(styles);
 
 export default function Menu() {
@@ -38,25 +39,30 @@ export default function Menu() {
         <div className={styles.drawer}>
           <div className={styles.pages}>
             <ul>
-              <li
-                onClick={() => goToSection("aboutMe")}
-                // className={styles.active}
-              >
+              <li onClick={() => goToSection("aboutMe")}>
                 <span>Sobre mim</span>
                 <span>Sobre mim</span>
+              </li>
+              <li onClick={() => goToSection("skills")}>
+                <span>Habilidades</span>
+                <span>Habilidades</span>
+              </li>
+              <li onClick={() => goToSection("experience")}>
+                <span>Experiência</span>
+                <span>Experiência</span>
               </li>
               <li onClick={() => goToSection("projects")}>
                 <span>Projetos</span>
                 <span>Projetos</span>
               </li>
-              <li onClick={() => goToSection("blog")}>
+              {/* <li onClick={() => goToSection("blog")}>
                 <span>Blog</span>
                 <span>Blog</span>
-              </li>
+              </li> */}
             </ul>
           </div>
 
-          <div className={styles.social}>
+          {/* <div className={styles.social}>
             <div className={styles.links}>
               <a
                 href="https://github.com/raphafritz"
@@ -75,13 +81,7 @@ export default function Menu() {
                 <span>LinkedIn</span>
               </a>
             </div>
-
-            <div className={styles.email}>
-              <a href="mailto:raphaelsella94@gmail.com">
-                raphaelsella94@gmail.com
-              </a>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

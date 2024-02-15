@@ -7,7 +7,7 @@ import styles from "@/styles/projects.module.scss";
 import ProjectDetails from "@/containers/ProjectDetails";
 import Button from "@/components/Button";
 
-import ProjectOne from "@/public/068e2067120026688b6e8bae5cd3a06e.png";
+import ProjectOne from "@/public/image_processing20210119-19857-15nskjt.png";
 import Image from "next/image";
 
 export default function Projects() {
@@ -30,14 +30,15 @@ export default function Projects() {
             </p>
           </div>
         </div>
+        <div className={styles.project} onClick={() => setOpen(true)}>
+          <div className={styles.picture}>
+            <Image src={ProjectOne} alt="" layout="responsive" />
+          </div>
+          <div className={styles.details}>
+            <p className={styles.name}>Adopet</p>
+          </div>
+        </div>
       </div>
-
-      {/* <div className="d-flex justify-center">
-        <Button design="primary">
-          <span>Ver todos os projetos</span>
-          <span>Botão em manutenção</span>
-        </Button>
-      </div> */}
 
       <ProjectDetails open={open} onClose={() => setOpen(false)} />
     </>

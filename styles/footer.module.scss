@@ -1,16 +1,14 @@
 .footerContainer {
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #202228;
-    padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #202228;
+  padding: 3rem;
+  height: 8rem;
 
-    p {
-      color: #777;
-      font-size: clamp(1.4rem, 3vw, 1.6rem);
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
+  p {
+    color: #777;
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+    letter-spacing: 1px;
   }
 }

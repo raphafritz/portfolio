@@ -7,21 +7,12 @@ import Menu from "./Menu";
 
 export default function Header() {
   return (
-    <div className={styles.headerContainer}>
-      <header>
-        <div className={styles.logo}>
-          <Image src={Logo} alt="" width={50} height={50} />
-        </div>
-        <nav>
-          <ul>
-            <li>Sobre mim</li>
-            <li>Projetos</li>
-            <li>Blog</li>
-          </ul>
-        </nav>
+    <header className={styles.headerContainer}>
+      <div className={styles.logo}>
+        <Image src={Logo} alt="" width={50} height={50} />
+      </div>
 
-        <Menu />
-      </header>
-    </div>
+      <Menu />
+    </header>
   );
 }

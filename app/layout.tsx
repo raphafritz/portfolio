@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Bitter } from "next/font/google";
 import "@/styles/globals.scss";
 
-import SmoothScroll from "@/components/SmoothScroll";
-
 const bitter = Bitter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
@@ -18,10 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={bitter.className}>
-        {/* <SmoothScroll /> */}
-        {children}
-      </body>
+      <body className={bitter.className}>{children}</body>
     </html>
   );
 }

@@ -1,14 +1,20 @@
+@mixin animation($name: name, $range: range, $timeline: timeline) {
+  animation: $name 1s forwards;
+  animation-timeline: $timeline;
+  animation-range: $range;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  padding: 5rem 5rem 25rem;
+  padding: 5rem 5rem 20rem;
   width: 1200px;
   max-width: 100%;
-  overflow-x: hidden;
   margin: auto;
 
   @media screen and (max-width: 767px) {
     padding: 2.5rem 2.5rem 10rem;
+    overflow-x: hidden;
   }
 
   .titleSection {
@@ -16,20 +22,32 @@
     font-size: clamp(3.2rem, 5vw, 4rem);
     letter-spacing: 2px;
     font-weight: 500;
-    left: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     color: #fff;
+    display: inline-flex;
 
-    &:before {
-      content: attr(content);
+    // &:before {
+    //   content: attr(content);
+    //   position: absolute;
+    //   z-index: -1;
+    //   bottom: 2rem;
+    //   left: 0;
+    //   opacity: 0.05;
+    //   color: #fff;
+    //   font-weight: 700;
+    //   font-size: clamp(3.8rem, 5vw, 7rem);
+    // }
+
+    &:after {
+      content: "";
       position: absolute;
+      left: 2rem;
+      bottom: -0.5rem;
+      background: #1b1c20;
+      height: 3rem;
       z-index: -1;
-      bottom: 1.5rem;
-      left: -2.5rem;
-      opacity: 0.05;
-      color: #fff;
-      font-weight: 700;
-      font-size: clamp(3.8rem, 5vw, 6rem);
+      width: 100%;
+      border-radius: 15px 5px 15px 5px;
     }
   }
 
@@ -41,6 +59,7 @@
   }
 
   .aboutMeSection {
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
@@ -49,15 +68,137 @@
   }
 
   .projectsSection {
-    margin-top: 10rem;
-    margin-bottom: 7.5rem;
+    margin-top: 7.5rem;
     scroll-snap-align: start;
     scroll-margin-top: 7.5rem;
   }
 
   .blogSection {
-    margin-top: 10rem;
+    margin-top: 7.5rem;
     scroll-snap-align: start;
     scroll-margin-top: 7.5rem;
+  }
+}
+
+.skills {
+  margin-bottom: 7.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem 3rem;
+  grid-template-areas:
+    "a a b c"
+    "a a b";
+  align-items: start;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .skill {
+    background: #121316;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    position: relative;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease;
+
+    &:nth-child(1) {
+      @include animation(fromLeft, cover 0% cover 40%, view());
+    }
+    &:nth-child(2) {
+      @include animation(fromBottom, cover 0% cover 40%, view());
+    }
+    &:nth-child(3) {
+      @include animation(fromRight, cover 0% cover 40%, view());
+    }
+    &:nth-child(4) {
+      @include animation(fromLeft, cover 0% cover 40%, view());
+    }
+    &:nth-child(5) {
+      @include animation(fromBottom, cover 0% cover 40%, view());
+    }
+    &:nth-child(6) {
+      @include animation(fromRight, cover 0% cover 40%, view());
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+
+    .title {
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+      position: relative;
+      color: #ffffff80;
+    }
+
+    .description {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: #555;
+      font-weight: 400;
+      margin-top: 2rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.toUp {
+  position: fixed;
+  bottom: 10rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.25s ease-in-out;
+
+  &.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    translate: 0 100vh;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    translate: -100vw 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    opacity: 0;
+    translate: 100vw 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }
