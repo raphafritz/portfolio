@@ -178,7 +178,7 @@ export default function AboutMe() {
         </Button>
         <Button design="icon">
           <a
-            href="https://www.linkedin.com/raphaelsella"
+            href="https://www.linkedin.com/in/raphaelsella"
             aria-label="LinkedIn"
             target="_blank"
           >

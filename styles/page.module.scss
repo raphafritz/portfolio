@@ -25,6 +25,7 @@
     margin-bottom: 5rem;
     color: #fff;
     display: inline-flex;
+    @include animation(fromBottom, cover 0% cover 30%, view());
 
     // &:before {
     //   content: attr(content);
@@ -70,7 +71,12 @@
     scroll-margin-top: 12.5rem;
   }
 
-  .blogSection {
+  .skillsSection {
+    margin-top: 7.5rem;
+    scroll-margin-top: 12.5rem;
+  }
+
+  .experienceSection {
     margin-top: 7.5rem;
     scroll-margin-top: 12.5rem;
   }
@@ -92,13 +98,13 @@
   }
 
   .skill {
-    background: #15171a;
+    background: #101113;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
     padding: 3rem;
     position: relative;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 0px #131517;
     transition: all 0.25s ease;
 
     @media screen and (min-width: 768px) {
@@ -120,10 +126,6 @@
       &:nth-child(6) {
         @include animation(fromRight, cover 0% cover 40%, view());
       }
-    }
-
-    &:hover {
-      box-shadow: 15px 10px 0px rgba(0, 0, 0, 0.05);
     }
 
     .title {

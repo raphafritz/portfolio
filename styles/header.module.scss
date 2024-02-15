@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   z-index: 300;
-  background: linear-gradient(to bottom, #101113 30%, transparent);
+  background: linear-gradient(to bottom, #0b0d0e 30%, transparent);
 
   .logo {
     position: relative;
@@ -33,21 +33,22 @@
 
       li {
         color: #555;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         letter-spacing: 1px;
-        font-weight: 500;
+        font-weight: 700;
         cursor: pointer;
         position: relative;
+        text-transform: uppercase;
 
         &:before {
           content: "";
-          background: #333;
-          height: 2px;
+          background: #1b1c20;
+          height: 5px;
           width: 0;
+          border-radius: 5px 0 5px 0;
           position: absolute;
-          bottom: -0.5rem;
-          left: 0;
-          right: 0;
+          bottom: -1rem;
+          right: -1rem;
           margin: auto;
           transition: all 0.25s ease;
         }

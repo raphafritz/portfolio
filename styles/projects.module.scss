@@ -1,3 +1,9 @@
+@mixin animation($name: name, $range: range, $timeline: timeline) {
+  animation: $name 1s forwards;
+  animation-timeline: $timeline;
+  animation-range: $range;
+}
+
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -14,21 +20,21 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background: #101113;
+    border-radius: 15px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
 
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 1;
-      transition: all 0.25s ease;
-      background: linear-gradient(
-        to bottom,
-        rgba(16, 17, 19, 0.6),
-        rgba(16, 17, 19, 0.95)
-      );
+    &:nth-child(1) {
+      @include animation(fromLeft, cover 0% cover 40%, view());
+    }
+    &:nth-child(2) {
+      @include animation(fromRight, cover 0% cover 40%, view());
+    }
+    &:nth-child(3) {
+      @include animation(fromLeft, cover 0% cover 40%, view());
+    }
+    &:nth-child(4) {
+      @include animation(fromRight, cover 0% cover 40%, view());
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -52,8 +58,8 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-      border-radius: 15px;
-      display: flex;
+      border-radius: 15px 15px 0 0;
+      height: 250px;
 
       img {
         transition: all 0.5s ease;
@@ -61,16 +67,11 @@
     }
 
     .details {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 3rem;
-      z-index: 1;
+      margin-top: 1rem;
+      padding: 2rem;
 
       .name {
         font-weight: 700;
@@ -79,7 +80,7 @@
       }
 
       .resume {
-        color: #999;
+        color: #777;
         line-height: 1.5;
         letter-spacing: 1px;
         font-size: clamp(1.4rem, 3vw, 1.6rem);
@@ -87,9 +88,44 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
       }
+
+      .techs {
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        display: flex;
+        gap: 1.5rem;
+
+        svg {
+          width: 35px;
+        }
+      }
     }
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    translate: -100vw 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    opacity: 0;
+    translate: 100vw 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
   }
 }

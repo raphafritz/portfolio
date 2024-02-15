@@ -62,7 +62,7 @@ export default function Home() {
           <Wave />
         </div>
 
-        <section className={styles.projectsSection} id="skills">
+        <section className={styles.skillsSection} id="skills">
           <h3 className={styles.titleSection}>Habilidades</h3>
 
           <div className={styles.skills}>
@@ -119,7 +119,7 @@ export default function Home() {
           <Wave />
         </div>
 
-        <section className={styles.projectsSection} id="experience">
+        <section className={styles.experienceSection} id="experience">
           <h3 className={styles.titleSection}>Experiência</h3>
 
           <div className={styles.skills}>
