@@ -1,7 +1,7 @@
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
+  gap: 3rem;
   place-items: center;
 
   @media screen and (max-width: 767px) {
@@ -82,7 +82,7 @@
         color: #999;
         line-height: 1.5;
         letter-spacing: 1px;
-        font-size: 1.6rem;
+        font-size: clamp(1.4rem, 3vw, 1.6rem);
         margin-top: 1rem;
         overflow: hidden;
         text-overflow: ellipsis;
