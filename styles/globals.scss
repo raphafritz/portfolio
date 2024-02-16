@@ -144,16 +144,16 @@ a {
 
 #blob {
   background: #fff;
-  height: 30px;
+  height: 200px;
   aspect-ratio: 1;
   position: absolute;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, #4cabaf, aquamarine);
+  background: linear-gradient(to right, rgb(16, 40, 104), #133a8e);
   animation: rotate 20s infinite;
-  filter: blur(30px);
+  filter: blur(150px);
   pointer-events: none;
   z-index: 10;
 }

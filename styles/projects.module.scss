@@ -22,19 +22,20 @@
     flex-direction: column;
     background: #101113;
     border-radius: 15px;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
 
-    &:nth-child(1) {
-      @include animation(fromLeft, cover 0% cover 40%, view());
-    }
-    &:nth-child(2) {
-      @include animation(fromRight, cover 0% cover 40%, view());
-    }
-    &:nth-child(3) {
-      @include animation(fromLeft, cover 0% cover 40%, view());
-    }
-    &:nth-child(4) {
-      @include animation(fromRight, cover 0% cover 40%, view());
+    @media screen and (min-width: 768px) {
+      &:nth-child(1) {
+        @include animation(fromLeft, cover 0% cover 40%, view());
+      }
+      &:nth-child(2) {
+        @include animation(fromRight, cover 0% cover 40%, view());
+      }
+      &:nth-child(3) {
+        @include animation(fromLeft, cover 0% cover 40%, view());
+      }
+      &:nth-child(4) {
+        @include animation(fromRight, cover 0% cover 40%, view());
+      }
     }
 
     @media (hover: hover) and (pointer: fine) {

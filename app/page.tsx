@@ -21,19 +21,23 @@ export default function Home() {
   useEffect(() => {
     const blob = document.getElementById("blob");
 
-    document.body.onpointermove = (e) => {
-      const { clientX, clientY } = e;
+    const handleMouseMove = (event: MouseEvent) => {
+      const { pageY, pageX } = event;
 
       if (!blob) return;
 
       blob.animate(
         {
-          left: `${clientX}px`,
-          top: `${clientY}px`,
+          left: `${pageX}px`,
+          top: `${pageY}px`,
         },
-        { duration: 1500, fill: "forwards" }
+        { duration: 200, fill: "forwards" }
       );
     };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => document.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   useEffect(() => {
@@ -51,7 +55,7 @@ export default function Home() {
     <>
       <Header />
 
-      {/* <div id="blob" /> */}
+      <div id="blob" />
 
       <main className={styles.main}>
         <section className={styles.aboutMeSection} id="aboutMe">

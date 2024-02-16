@@ -96,7 +96,7 @@
     top: 0;
     background: #0b0d0e;
     width: 480px;
-    max-width: 100svw;
+    max-width: 80svw;
     z-index: 300;
     transform: translateX(480px);
     transition: all 0.25s ease-in-out;
@@ -119,17 +119,17 @@
         list-style: none;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 5rem;
+        gap: 2rem;
 
         li {
           color: #fff;
-          font-size: 5rem;
+          font-size: 2rem;
           position: relative;
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          max-height: 6rem;
-          line-height: 6rem;
+          max-height: 3rem;
+          line-height: 3rem;
           cursor: pointer;
 
           &.active {
@@ -152,17 +152,19 @@
           }
 
           span {
-            height: 6rem;
+            height: 3rem;
             transition: all 0.5s ease;
+            text-transform: uppercase;
+            font-weight: 700;
           }
 
           &:hover:not(.active) {
             span:nth-child(1) {
-              transform: translateY(-6rem);
+              transform: translateY(-3rem);
             }
 
             span:nth-child(2) {
-              transform: translateY(-6rem);
+              transform: translateY(-3rem);
             }
           }
 

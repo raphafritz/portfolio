@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <>
       <div className={styles.projectsGrid}>
-        {Array.from({ length: 4 }).map((a, i) => {
+        {Array.from({ length: 2 }).map((a, i) => {
           return (
             <div className={styles.project} key={i}>
               <div className={styles.picture}>

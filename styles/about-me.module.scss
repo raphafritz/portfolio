@@ -20,7 +20,7 @@
       margin-bottom: 2rem;
       font-size: clamp(4.4rem, 5vw, 6.4rem);
       font-weight: 800;
-      @include animation(cover 0 cover 40%);
+      @include animation(cover 0 cover 60%);
     }
 
     .colon,
@@ -124,7 +124,7 @@
     font-weight: 400;
     margin-top: 2rem;
     letter-spacing: 1px;
-    @include animation(cover 0 cover 60%);
+    @include animation(cover 0 cover 70%);
 
     span {
       display: block;
@@ -139,7 +139,7 @@
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
-    @include animation(cover 0 cover 70%);
+    @include animation(cover 0 cover 80%);
   }
 }
 
@@ -211,8 +211,11 @@
     transform: translateY(0);
   }
 
-  to {
+  40% {
     opacity: 0;
-    transform: translateY(-20vh);
+  }
+
+  to {
+    transform: translateY(-10vh);
   }
 }
