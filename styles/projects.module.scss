@@ -7,8 +7,7 @@
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  place-items: center;
+  gap: 3em;
 
   @media screen and (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
@@ -19,60 +18,34 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
+    border-radius: 2rem;
+    background: linear-gradient(to top, #191a1d, #0b0d0e);
+    overflow: hidden;
     flex-direction: column;
-    background: #191a1d;
-    border-radius: 15px;
 
     @media screen and (min-width: 768px) {
-      &:nth-child(1) {
-        @include animation(fromLeft, cover 0% cover 40%, view());
-      }
-      &:nth-child(2) {
-        @include animation(fromRight, cover 0% cover 40%, view());
-      }
-      &:nth-child(3) {
-        @include animation(fromLeft, cover 0% cover 40%, view());
-      }
-      &:nth-child(4) {
-        @include animation(fromRight, cover 0% cover 40%, view());
-      }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        .picture {
-          img {
-            transform: scale(1.1);
-          }
-        }
-
-        // .details {
-        //   opacity: 1;
-        //   transform: translateY(0);
-        //   transition: all 0.25s ease;
-        //   pointer-events: initial;
-        // }
-      }
+      @include animation(fromBottom, cover 0% cover 30%, view());
     }
 
     .picture {
       width: 100%;
       position: relative;
       overflow: hidden;
-      border-radius: 15px 15px 0 0;
-      height: 250px;
+      height: 300px;
 
-      img {
-        transition: all 0.5s ease;
+      @media screen and (max-width: 767px) {
+        border-radius: 0;
       }
     }
 
     .details {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      margin-top: 1rem;
-      padding: 2rem;
+      padding: 3rem;
+
+      @media screen and (max-width: 767px) {
+        padding: 2rem;
+      }
 
       .name {
         font-weight: 700;
@@ -95,7 +68,6 @@
 
       .techs {
         margin-top: 3rem;
-        margin-bottom: 5rem;
         display: flex;
         gap: 1.5rem;
 
@@ -107,22 +79,10 @@
   }
 }
 
-@keyframes fromLeft {
+@keyframes fromBottom {
   from {
     opacity: 0;
-    translate: -100vw 0;
-  }
-
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
-}
-
-@keyframes fromRight {
-  from {
-    opacity: 0;
-    translate: 100vw 0;
+    translate: 0 100vh;
   }
 
   to {

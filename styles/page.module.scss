@@ -25,7 +25,10 @@
     margin-bottom: 5rem;
     color: palegreen;
     display: inline-flex;
-    @include animation(fromBottom, cover 0% cover 30%, view());
+
+    @media screen and (min-width: 768px) {
+      @include animation(fromBottom, cover 0% cover 30%, view());
+    }
 
     // &:before {
     //   content: attr(content);
@@ -87,10 +90,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem 3rem;
-  grid-template-areas:
-    "a a b c"
-    "a a b";
-  align-items: start;
+  align-items: flex-end;
 
   @media screen and (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
@@ -118,12 +118,15 @@
         @include animation(fromRight, cover 0% cover 40%, view());
       }
       &:nth-child(4) {
+        align-self: flex-start;
         @include animation(fromLeft, cover 0% cover 40%, view());
       }
       &:nth-child(5) {
+        align-self: flex-start;
         @include animation(fromBottom, cover 0% cover 40%, view());
       }
       &:nth-child(6) {
+        align-self: flex-start;
         @include animation(fromRight, cover 0% cover 40%, view());
       }
     }
@@ -133,7 +136,7 @@
       letter-spacing: 1px;
       font-weight: 500;
       position: relative;
-      color: #999;
+      color: #fff;
     }
 
     .description {
