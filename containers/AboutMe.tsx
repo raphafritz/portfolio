@@ -39,11 +39,7 @@ export default function AboutMe() {
         </span>
         <span className={styles.colon}>,</span>
         <br />
-        <div className={styles.modern}>
-          <span>modernas</span>
-          <Wave color="#ff7fa7" />
-        </div>{" "}
-        e{" "}
+        <span className={styles.modern}>modernas</span> e{" "}
         <div className={styles.intuitive}>
           <span>intuitivas</span>
           <span>intuitivas</span>

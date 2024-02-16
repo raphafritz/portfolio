@@ -23,7 +23,7 @@
     letter-spacing: 2px;
     font-weight: 500;
     margin-bottom: 5rem;
-    color: #fff;
+    color: palegreen;
     display: inline-flex;
     @include animation(fromBottom, cover 0% cover 30%, view());
 
@@ -98,7 +98,7 @@
   }
 
   .skill {
-    background: #101113;
+    background: #191a1d;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -133,13 +133,13 @@
       letter-spacing: 1px;
       font-weight: 500;
       position: relative;
-      color: #ffffff80;
+      color: #999;
     }
 
     .description {
       font-size: clamp(1.4rem, 3vw, 1.6rem);
       line-height: 1.5;
-      color: #555;
+      color: #666;
       font-weight: 400;
       margin-top: 2rem;
       letter-spacing: 1px;
